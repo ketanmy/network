@@ -1,0 +1,28 @@
+{
+  "name": "network",
+  "version": "1.0.0",
+  "description": "professional network",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "app",
+    "test": "gulp test"
+  },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ketanmy/network.git"
+  },
+  "keywords": [
+    "network",
+    "professional",
+    "link",
+    "together"
+  ],
+  "author": "Ketan Mistry",
+  "license": "ISC",
+  "devDependencies": {
+    "deepmerge": "^0.2.10",
+    "through2": "^2.0.1",
+    "watchify": "^3.7.0"
+  }
+}
