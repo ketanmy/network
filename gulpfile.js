@@ -39,16 +39,19 @@ gulp.task('browserify', ['clean-script'], function(){
 
 // convert scss to css
 gulp.task('sass', ['clean-style'], function(){
-	return gulp.src('public/style/*.scss')
+	return gulp.src('public/style/main.scss')
 			.pipe(sass().on('error', sass.logError))
 			.pipe(gulp.dest('public/dist/style/'));
 });
 
 // watch scss
 gulp.task('watch', function(){
-	gulp.watch('public/script/**/**/*.js', ['browserify']);
+	gulp.watch('public/script/**/*.js', ['browserify']);
 	gulp.watch('public/style/*.scss', ['sass']);
 });
 
+// build script and style
+gulp.task('build', ['watch', 'browserify', 'sass']);
 
+// connect and prepare script and style for browser
 gulp.task('default', ['connect', 'watch', 'browserify', 'sass'])

@@ -1,7 +1,14 @@
 // dependencies
-//var routes = require('./routes/routes');
+var angular     = require('angular');
+    uiRouter    = require('angular-ui-router'); 
+    routes      = require('./routes/routes');
+
+require('./network/network');
 
 
+var app = angular.module('networkApp',[
+    'ui.router',
+    'network-crud'
+]);
 
-var app = angular.module('networkApp', []);
 app.config(routes);
